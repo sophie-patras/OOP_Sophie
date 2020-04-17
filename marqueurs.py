@@ -13,12 +13,12 @@ class Marqueurs:
           		id: Nom indique sur la carte
 		"""
 
-		self.idt = idt
-		self.ville = ville
-		self.position= position
+		self.idt=idt
+		self.ville=ville
+		self.position=position
 
 	def getId(self):
-        	return self.id
+        	return self.idt
 
 
 class Individu(Marqueurs):
@@ -29,9 +29,9 @@ class Individu(Marqueurs):
 		    age - int
                     transport: moyen de transport prefere - string
 	        """
-        	self.idt = idt
-		self.ville = ville
-		self.position= position
+        	self.idt=idt
+		self.ville=ville
+		self.position=position
 		self.age=age
  	        self.transport=transport
 
@@ -43,9 +43,9 @@ class Commerce(Marqueurs):
 	        """ ouverture - booleen
                     acces : acces preferentiel entre pieton, velo, bus, voiture - 			    string
 		"""
-		self.idt = idt
-		self.ville = ville
-		self.position= position
+		self.idt=idt
+		self.ville=ville
+		self.position=position
         	self.ouverture=ouverture
         	self.acces=acces
 
@@ -70,7 +70,7 @@ class Commerce(Marqueurs):
 		getDistance renvoie la distance entre deux positions lorsque 			l'individu parcourt les lignes d'une grille fictive
         	"""
 
-		dx=abs(self.position[0]- positionbis[0])
+		dx=abs(self.position[0]-positionbis[0])
 		dy=abs(self.position[1]-positionbis[1])
 		distance=dx+dy
 		return distance
